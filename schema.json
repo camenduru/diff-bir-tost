@@ -38,12 +38,6 @@
                 "enum": [
                     "dn"
                 ]
-            },
-            {
-                "description": "Image Super-Resolution",
-                "enum": [
-                    "sr"
-                ]
             }
         ],
         "default": "fr"
@@ -149,19 +143,6 @@
         "visibleIf": {
         "task": [
                 "dn"
-            ]
-        }
-    },
-    "sr": {
-        "type": "string",
-        "image1": "https://fakeimg.pl/440x294/282828/eae0d0/?text=input#.png",
-        "image2": "https://files.catbox.moe/qdlcu4.png",
-        "image3": "https://fakeimg.pl/440x294/282828/eae0d0/?text=output#.png",
-        "image4": "https://files.catbox.moe/mc4x6a.png",
-        "widget": "example",
-        "visibleIf": {
-            "task": [
-                "sr"
             ]
         }
     }

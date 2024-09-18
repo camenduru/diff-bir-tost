@@ -1,7 +1,7 @@
 {
     "input_image_check": "https://files.catbox.moe/a023r9.png",
     "task": "fr",
-    "upscale": 2,
+    "upscale": 1,
     "version": "v2",
     "steps": 50,
     "better_start": false,
