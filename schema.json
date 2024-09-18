@@ -16,14 +16,42 @@
       ],
       "widget": "readme"
     },
+    "task": {
+        "type": "string",
+        "widget": "select",
+        "description": "Task",
+        "oneOf": [
+            {
+                "description": "Face Restoration One Face",
+                "enum": [
+                    "fr"
+                ]
+            },
+            {
+                "description": "Face Restoration Multiple Faces",
+                "enum": [
+                    "fr_bg"
+                ]
+            },
+            {
+                "description": "Image Denoising",
+                "enum": [
+                    "dn"
+                ]
+            },
+            {
+                "description": "Image Super-Resolution",
+                "enum": [
+                    "sr"
+                ]
+            }
+        ],
+        "default": "fr"
+    },
     "input_image_check": {
         "type": "string",
         "description": "Input Image URL",
         "widget": "textarea"
-    },
-    "task": {
-        "type": "string",
-        "widget": "hidden"
     },
     "upscale": {
         "type": "string",
@@ -85,13 +113,57 @@
         "type": "integer",
         "widget": "hidden"
     },
-    "example": {
-      "type": "string",
-      "image1": "https://fakeimg.pl/700x464/282828/eae0d0/?text=input#.png",
-      "image2": "https://files.catbox.moe/x6ktl7.jpg",
-      "image3": "https://fakeimg.pl/700x464/282828/eae0d0/?text=output#.png",
-      "image4": "https://files.catbox.moe/1u2yyl.png",
-      "widget": "example"
+    "fr_bg": {
+        "type": "string",
+        "image1": "https://fakeimg.pl/700x464/282828/eae0d0/?text=input#.png",
+        "image2": "https://files.catbox.moe/x6ktl7.jpg",
+        "image3": "https://fakeimg.pl/700x464/282828/eae0d0/?text=output#.png",
+        "image4": "https://files.catbox.moe/1u2yyl.png",
+        "widget": "example",
+        "visibleIf": {
+        "task": [
+                "fr_bg"
+            ]
+        }
+    },
+    "fr": {
+        "type": "string",
+        "image1": "https://fakeimg.pl/512x512/282828/eae0d0/?text=input#.png",
+        "image2": "https://files.catbox.moe/a023r9.png",
+        "image3": "https://fakeimg.pl/512x512/282828/eae0d0/?text=output#.png",
+        "image4": "https://files.catbox.moe/u8ypx4.png",
+        "widget": "example",
+        "visibleIf": {
+        "task": [
+                "fr"
+            ]
+        }
+    },
+    "dn": {
+        "type": "string",
+        "image1": "https://fakeimg.pl/512x512/282828/eae0d0/?text=input#.png",
+        "image2": "https://files.catbox.moe/a877j5.png",
+        "image3": "https://fakeimg.pl/512x512/282828/eae0d0/?text=output#.png",
+        "image4": "https://files.catbox.moe/ye0uzi.png",
+        "widget": "example",
+        "visibleIf": {
+        "task": [
+                "dn"
+            ]
+        }
+    },
+    "sr": {
+        "type": "string",
+        "image1": "https://fakeimg.pl/440x294/282828/eae0d0/?text=input#.png",
+        "image2": "https://files.catbox.moe/qdlcu4.png",
+        "image3": "https://fakeimg.pl/440x294/282828/eae0d0/?text=output#.png",
+        "image4": "https://files.catbox.moe/mc4x6a.png",
+        "widget": "example",
+        "visibleIf": {
+            "task": [
+                "sr"
+            ]
+        }
     }
   },
   "buttons": [
