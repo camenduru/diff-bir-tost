@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "object",
+  "properties": {
+    "readme": {
+      "type": "string",
+      "title": "DiffBIR: Towards Blind Image Restoration with Generative Diffusion Prior",
+      "author": "Xinqi Lin, Jingwen He, Ziyan Chen, Zhaoyang Lyu, Bo Dai, Fanghua Yu, Wanli Ouyang, Yu Qiao, Chao Dong",
+      "paper": "https://arxiv.org/abs/2308.15070",
+      "page": "https://0x3f3f3f3fun.github.io/projects/diffbir/",
+      "code": "https://github.com/XPixelGroup/DiffBIR",
+      "jupyter": "https://github.com/camenduru/DiffBIR-colab",
+      "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/diff-bir.ipynb",
+      "tags": [
+        "Image to Image"
+      ],
+      "widget": "readme"
+    },
+    "input_image_check": {
+        "type": "string",
+        "description": "Input Image URL",
+        "widget": "textarea"
+    },
+    "task": {
+        "type": "string",
+        "widget": "hidden"
+    },
+    "upscale": {
+        "type": "string",
+        "widget": "hidden"
+    },
+    "version": {
+        "type": "string",
+        "widget": "hidden"
+    },
+    "steps": {
+        "type": "integer",
+        "widget": "hidden"
+    },
+    "better_start": {
+        "type": "boolean",
+        "widget": "hidden"
+    },
+    "tiled": {
+        "type": "boolean",
+        "widget": "hidden"
+    },
+    "tile_size": {
+        "type": "integer",
+        "widget": "hidden"
+    },
+    "tile_stride": {
+        "type": "integer",
+        "widget": "hidden"
+    },
+    "pos_prompt": {
+        "type": "string",
+        "widget": "hidden"
+    },
+    "neg_prompt": {
+        "type": "string",
+        "widget": "hidden"
+    },
+    "cfg_scale": {
+        "type": "number",
+        "widget": "hidden"
+    },
+    "guidance": {
+        "type": "boolean",
+        "widget": "hidden"
+    },
+    "g_loss": {
+        "type": "string",
+        "widget": "hidden"
+    },
+    "g_scale": {
+        "type": "number",
+        "widget": "hidden"
+    },
+    "g_space": {
+        "type": "string",
+        "widget": "hidden"
+    },
+    "seed": {
+        "type": "integer",
+        "widget": "hidden"
+    },
+    "example": {
+      "type": "string",
+      "image1": "https://files.catbox.moe/x6ktl7.jpg",
+      "image2": "https://fakeimg.pl/700x464/282828/eae0d0/?text=input#.png",
+      "image3": "https://fakeimg.pl/700x464/282828/eae0d0/?text=output#.png",
+      "image4": "https://fakeimg.pl/700x464/282828/eae0d0/?text=output#.png",
+      "widget": "example"
+    }
+  },
+  "buttons": [
+    {
+      "id": "enter",
+      "label": "🥪 Enter"
+    }
+  ]
+}
