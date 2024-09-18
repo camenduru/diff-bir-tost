@@ -84,7 +84,7 @@ def generate(input):
         supported_tasks[args.task](args).run()
 
     if args.task == "fr_bg":
-        result = "/content/result/restored_backgrounds/diffbir_tost.png"
+        result = "/content/result/diffbir_tost_0.png"
     else:
         result = "/content/result/diffbir_tost.png"
     try:
