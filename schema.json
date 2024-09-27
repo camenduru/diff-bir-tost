@@ -1,113 +1,119 @@
 {
-  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
-  "type": "object",
-  "properties": {
-    "readme": {
-      "type": "string",
-      "title": "DiffBIR: Towards Blind Image Restoration with Generative Diffusion Prior",
-      "author": "Xinqi Lin, Jingwen He, Ziyan Chen, Zhaoyang Lyu, Bo Dai, Fanghua Yu, Wanli Ouyang, Yu Qiao, Chao Dong",
-      "paper": "https://arxiv.org/abs/2308.15070",
-      "page": "https://0x3f3f3f3fun.github.io/projects/diffbir/",
-      "code": "https://github.com/XPixelGroup/DiffBIR",
-      "jupyter": "https://github.com/camenduru/DiffBIR-colab",
-      "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/diff-bir.ipynb",
-      "tags": [
-        "Image to Image"
-      ],
-      "widget": "readme"
-    },
-    "task": {
+    "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+    "type": "object",
+    "properties": {
+      "readme": {
+        "type": "string",
+        "title": "DiffBIR: Towards Blind Image Restoration with Generative Diffusion Prior",
+        "author": "Xinqi Lin, Jingwen He, Ziyan Chen, Zhaoyang Lyu, Bo Dai, Fanghua Yu, Wanli Ouyang, Yu Qiao, Chao Dong",
+        "paper": "https://arxiv.org/abs/2308.15070",
+        "page": "https://0x3f3f3f3fun.github.io/projects/diffbir/",
+        "code": "https://github.com/XPixelGroup/DiffBIR",
+        "jupyter": "https://github.com/camenduru/DiffBIR-colab",
+        "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/diff-bir.ipynb",
+        "tags": [
+          "Image to Image"
+        ],
+        "widget": "readme"
+      },
+      "task": {
         "type": "string",
         "widget": "select",
         "description": "Task",
         "oneOf": [
-            {
-                "description": "Face Restoration One Face",
-                "enum": [
-                    "fr"
-                ]
-            },
-            {
-                "description": "Face Restoration Multiple Faces",
-                "enum": [
-                    "fr_bg"
-                ]
-            },
-            {
-                "description": "Image Denoising",
-                "enum": [
-                    "dn"
-                ]
-            }
+          {
+            "description": "Face Restoration One Face",
+            "enum": [
+              "fr"
+            ]
+          },
+          {
+            "description": "Face Restoration Multiple Faces",
+            "enum": [
+              "fr_bg"
+            ]
+          },
+          {
+            "description": "Image Denoising",
+            "enum": [
+              "dn"
+            ]
+          }
         ],
         "default": "fr"
-    },
-    "input_image_check": {
+      },
+      "upload": {
+        "type": "string",
+        "widget": "upload",
+        "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+        "property": "input_image_check"
+      },
+      "input_image_check": {
         "type": "string",
         "description": "Input Image URL",
         "widget": "textarea"
-    },
-    "upscale": {
+      },
+      "upscale": {
         "type": "string",
         "widget": "hidden"
-    },
-    "version": {
+      },
+      "version": {
         "type": "string",
         "widget": "hidden"
-    },
-    "steps": {
+      },
+      "steps": {
         "type": "integer",
         "widget": "hidden"
-    },
-    "better_start": {
+      },
+      "better_start": {
         "type": "boolean",
         "widget": "hidden"
-    },
-    "tiled": {
+      },
+      "tiled": {
         "type": "boolean",
         "widget": "hidden"
-    },
-    "tile_size": {
+      },
+      "tile_size": {
         "type": "integer",
         "widget": "hidden"
-    },
-    "tile_stride": {
+      },
+      "tile_stride": {
         "type": "integer",
         "widget": "hidden"
-    },
-    "pos_prompt": {
+      },
+      "pos_prompt": {
         "type": "string",
         "widget": "hidden"
-    },
-    "neg_prompt": {
+      },
+      "neg_prompt": {
         "type": "string",
         "widget": "hidden"
-    },
-    "cfg_scale": {
+      },
+      "cfg_scale": {
         "type": "number",
         "widget": "hidden"
-    },
-    "guidance": {
+      },
+      "guidance": {
         "type": "boolean",
         "widget": "hidden"
-    },
-    "g_loss": {
+      },
+      "g_loss": {
         "type": "string",
         "widget": "hidden"
-    },
-    "g_scale": {
+      },
+      "g_scale": {
         "type": "number",
         "widget": "hidden"
-    },
-    "g_space": {
+      },
+      "g_space": {
         "type": "string",
         "widget": "hidden"
-    },
-    "seed": {
+      },
+      "seed": {
         "type": "integer",
         "widget": "hidden"
-    },
-    "fr_bg": {
+      },
+      "fr_bg": {
         "type": "string",
         "image1": "https://fakeimg.pl/700x464/282828/eae0d0/?text=input#.png",
         "image2": "https://files.catbox.moe/x6ktl7.jpg",
@@ -115,12 +121,12 @@
         "image4": "https://files.catbox.moe/1u2yyl.png",
         "widget": "example",
         "visibleIf": {
-        "task": [
-                "fr_bg"
-            ]
+          "task": [
+            "fr_bg"
+          ]
         }
-    },
-    "fr": {
+      },
+      "fr": {
         "type": "string",
         "image1": "https://fakeimg.pl/512x512/282828/eae0d0/?text=input#.png",
         "image2": "https://files.catbox.moe/a023r9.png",
@@ -128,12 +134,12 @@
         "image4": "https://files.catbox.moe/u8ypx4.png",
         "widget": "example",
         "visibleIf": {
-        "task": [
-                "fr"
-            ]
+          "task": [
+            "fr"
+          ]
         }
-    },
-    "dn": {
+      },
+      "dn": {
         "type": "string",
         "image1": "https://fakeimg.pl/512x512/282828/eae0d0/?text=input#.png",
         "image2": "https://files.catbox.moe/a877j5.png",
@@ -141,16 +147,16 @@
         "image4": "https://files.catbox.moe/ye0uzi.png",
         "widget": "example",
         "visibleIf": {
-        "task": [
-                "dn"
-            ]
+          "task": [
+            "dn"
+          ]
         }
-    }
-  },
-  "buttons": [
-    {
-      "id": "enter",
-      "label": "🥪 Enter"
-    }
-  ]
-}
+      }
+    },
+    "buttons": [
+      {
+        "id": "enter",
+        "label": "🥪 Enter"
+      }
+    ]
+  }
