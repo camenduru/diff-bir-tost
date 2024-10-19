@@ -17,4 +17,4 @@ https://0x3f3f3f3fun.github.io/projects/diffbir/
 ### 🖼 Output
 
 ### 🏢 Sponsor
-https://runpod.io
+[https://runpod.io](https://runpod.io?ref=iqi9iy8y)
